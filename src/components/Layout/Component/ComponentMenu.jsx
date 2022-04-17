@@ -1,12 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import { ELEMENTS_CONFIG } from 'config';
-import { basePath } from 'pages/ComponentPage/route.js';
+import route, { basePath } from 'pages/ComponentPage/route.js';
 import './component.scss';
 
-const ComponentMenu = ({ activeLink }) => {
+const ComponentMenu = () => {
+  const { componentPath } = useParams(route.path);
   const links = Object.values(ELEMENTS_CONFIG)
     .sort(({ name: name1 }, { name: name2 }) => name1.localeCompare(name2))
     .map(({ path, name }) => (
@@ -14,7 +15,9 @@ const ComponentMenu = ({ activeLink }) => {
         key={name}
         to={`${basePath}/${path}`}
         className={
-          activeLink === name ? 'menu__navlink_active' : 'menu__navlink'
+          componentPath === path
+            ? 'menu__navlink menu__navlink_active'
+            : 'menu__navlink'
         }
       >
         {name}
@@ -29,10 +32,6 @@ const ComponentMenu = ({ activeLink }) => {
       <nav className="menu__nav">{links}</nav>
     </div>
   );
-};
-
-ComponentMenu.propTypes = {
-  activeLink: PropTypes.string,
 };
 
 export default ComponentMenu;

@@ -18,7 +18,7 @@ const Component = ({ content, name, tabs }) => {
   return (
     <section className="component">
       <div className="component__menu">
-        <ComponentMenu activeLink={name} />
+        <ComponentMenu />
       </div>
       <div className="component__content">
         <h3 className="component__content-title">{name}</h3>

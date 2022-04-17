@@ -7,8 +7,10 @@ import { Page, PageContent, Container } from 'components/Layout/styles';
 import route from './route';
 
 const ComponentPage = () => {
-  const { name } = useParams(route.path);
-  const data = ELEMENTS_CONFIG[name];
+  const { componentPath } = useParams(route.path);
+  const data = Object.values(ELEMENTS_CONFIG).find(
+    ({ path }) => path === componentPath
+  );
   return (
     <Page>
       <ComponentPageHeader />

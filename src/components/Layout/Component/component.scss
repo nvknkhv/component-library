@@ -55,34 +55,46 @@
 .menu {
   font-family: 'Inter', sans-serif;
 
-  a {
-    line-height: 3rem;
-    display: block;
-    font-size: 1.5rem;
-
-    @media (min-width: 768px) {
-      font-size: 1rem;
-      line-height: 2rem;
-    }
-  }
-
-  & &__title {
-    font-weight: 400;
-    font-size: 2.5rem;
-    margin: 1rem 0;
-    color: var(--grey-4);
-
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
-  }
-
   &__nav {
     display: flex;
     flex-direction: column;
   }
 
-  &__navlink_active {
-    color: var(--pink);
+  &__navlink {
+    line-height: 3rem;
+    display: block;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+
+    &_active {
+      color: var(--secondary);
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--grey-4);
+    display: block;
+    padding: 2rem 0 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    &:hover {
+      color: var(--black);
+    }
   }
 }

@@ -3,7 +3,6 @@ require('dotenv/config'); /* allows node process work with variables from .env f
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 const jsLoaders = require('./loaders/js-loaders');
 const cssLoaders = require('./loaders/css-loaders');
@@ -51,9 +50,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/index.html'),
-    }),
-    new CopyPlugin({
-      patterns: [{ from: 'assets/images/sprite.svg', to: 'public/sprite.svg' }],
     }),
   ],
 };

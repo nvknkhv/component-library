@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 
 import { HeaderLogo, ComponentMenu } from 'components/Layout';
 import { Container, Divider } from 'components/Layout/styles';
 import './burgerMenu.scss';
+import { useOnClickOutside } from './useOnClickOutside';
 
 const MenuWrapper = styled.div`
-  padding: 0 16px;
+  padding: 16px;
 `;
 
 const BurgerMenu = () => {
   const [isOpen, setOpen] = useState(false);
+  const refBurgerMenu = useRef();
+  useOnClickOutside(refBurgerMenu, () => setOpen(false));
   return (
     <>
       <div
@@ -23,7 +26,7 @@ const BurgerMenu = () => {
         </svg>
       </div>
       <div id="burger-menu" className="burger-menu" data-open={isOpen}>
-        <div className="burger-menu__menu">
+        <div className="burger-menu__menu" ref={refBurgerMenu}>
           <header className="header header_white">
             <Container>
               <div className="header__navbar burger-menu__navbar">
@@ -41,7 +44,7 @@ const BurgerMenu = () => {
             </Container>
           </header>
           <Divider />
-          <MenuWrapper>
+          <MenuWrapper onClick={() => setOpen(false)}>
             <ComponentMenu />
           </MenuWrapper>
         </div>

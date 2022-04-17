@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -18,6 +19,14 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[hash:8].css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'assets/images/sprite.svg',
+          to: 'public/sprite.svg',
+        },
+      ],
     }),
     //visualize size of webpack output files
     new BundleAnalyzerPlugin({

@@ -179,7 +179,7 @@ export const ELEMENTS_CONFIG = {
     tabs: {
       html: htmlModal,
       scss: scssModal,
-      js: jsModal,
+      javascript: jsModal,
     },
     path: 'modal',
   },

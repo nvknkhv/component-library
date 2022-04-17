@@ -43,11 +43,7 @@
     & pre {
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 2rem;
-
-      code {
-        font-family: monospace;
-      }
+      padding: 2rem !important;
     }
   }
 }

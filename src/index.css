@@ -23,7 +23,7 @@
   --secondary-dark: var(--pink-solid);
 }
 
-* {
+body {
   font-family: 'Roboto', sans-serif;
 }
 

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import { TabsWrapper, Tab } from 'components/General/Tabs';
 import { Divider } from 'components/Layout/styles';
@@ -15,6 +17,7 @@ const Component = ({ content, name, tabs }) => {
   const TABS_NAMES = Object.keys(tabs);
   const [activeTab, setActiveTab] = useState(TABS_NAMES[0]);
   useEffect(() => setActiveTab(TABS_NAMES[0]), [name]);
+
   return (
     <section className="component">
       <div className="component__menu">
@@ -40,9 +43,9 @@ const Component = ({ content, name, tabs }) => {
           <Divider />
           <div className="component__code-content">
             <figure>
-              <pre>
-                <code>{tabs[activeTab]}</code>
-              </pre>
+              <SyntaxHighlighter language={activeTab} style={a11yLight}>
+                {tabs[activeTab]}
+              </SyntaxHighlighter>
             </figure>
           </div>
         </div>

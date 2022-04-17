@@ -24,7 +24,7 @@ export const Radio = ({
       <span className="radio__state">
         <span className="radio__control">
           <svg className="radio__icon">
-            <use href="/public/sprite.svg#radio" />
+            <use href="/component-library/public/sprite.svg#radio" />
           </svg>
         </span>
         <span className="radio__title">{children}</span>

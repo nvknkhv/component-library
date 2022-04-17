@@ -33,7 +33,7 @@ const Modal = ({ isPreview = false }) => {
                     document.body.style.overflow = 'initial';
                   }}
                 >
-                  <use href="/public/sprite.svg#close" />
+                  <use href="/component-library/public/sprite.svg#close" />
                 </svg>
               </header>
               <div className="modal__body">

@@ -4,7 +4,6 @@ import { Link, Outlet } from 'react-router-dom';
 
 import { Container } from 'components/Layout/styles';
 import { basePath } from 'pages/ComponentPage/route.js';
-console.log('basePath: ', basePath);
 
 import './card.scss';
 

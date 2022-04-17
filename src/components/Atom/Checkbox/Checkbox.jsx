@@ -22,7 +22,7 @@ export const Checkbox = ({
       <span className="checkbox__state">
         <span className="checkbox__control">
           <svg className="checkbox__icon">
-            <use href="/public/sprite.svg#check" />
+            <use href="/component-library/public/sprite.svg#check" />
           </svg>
         </span>
         <span className="checkbox__title">{children}</span>

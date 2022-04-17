@@ -19,7 +19,7 @@ const BurgerMenu = () => {
         onClick={() => setOpen(true)}
       >
         <svg className="burger-menu__icon">
-          <use href="/public/sprite.svg#burger" />
+          <use href="/component-library/public/sprite.svg#burger" />
         </svg>
       </div>
       <div id="burger-menu" className="burger-menu" data-open={isOpen}>
@@ -33,7 +33,7 @@ const BurgerMenu = () => {
                   onClick={() => setOpen(false)}
                 >
                   <svg className="burger-menu__icon">
-                    <use href="/public/sprite.svg#close" />
+                    <use href="/component-library/public/sprite.svg#close" />
                   </svg>
                 </div>
                 <HeaderLogo />

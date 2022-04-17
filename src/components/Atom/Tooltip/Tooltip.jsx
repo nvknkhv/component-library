@@ -7,7 +7,7 @@ const Tooltip = ({ isPreview }) => {
   return (
     <div className={isPreview ? 'tooltip tooltip_preview' : 'tooltip'}>
       <svg className="tooltip__icon">
-        <use href="/public/sprite.svg#help" />
+        <use href="/component-library/public/sprite.svg#help" />
       </svg>
       <div className="tooltip__bubble">Helper Text</div>
     </div>

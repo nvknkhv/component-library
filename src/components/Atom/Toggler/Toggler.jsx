@@ -22,7 +22,7 @@ export const Toggler = ({
       <span className="toggler__state">
         <span className="toggler__control">
           <svg className="toggler__icon">
-            <use href="/public/sprite.svg#toggler" />
+            <use href="/component-library/public/sprite.svg#toggler" />
           </svg>
         </span>
         <span className="toggler__title">{children}</span>

@@ -1,0 +1,88 @@
+{
+  "name": "component-library",
+  "version": "0.1.0",
+  "description": "Component library for course on https://learn.javascript.ru/ by nvknkhv",
+  "author": "Natalya Konokhova",
+  "homepage": "http://nvknkhv.github.io/component-library",
+  "license": "ISC",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/webpack.dev.js --progress",
+    "start:prod": "cross-env NODE_ENV=production webpack-dev-server --config ./webpack/webpack.prod.js --progress",
+    "build:dev": "cross-env NODE_ENV=development webpack --config ./webpack/webpack.dev.js --progress",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.prod.js --progress",
+    "format": "prettier --write src/**/*",
+    "eslint:fix": "eslint --fix src/**/*.{js,jsx}",
+    "reinstall": "rm -rf node_modules && npm i",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "component",
+    "library"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.25%",
+      "not dead"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "components": "^0.1.0",
+    "postcss-loader": "^6.2.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.0",
+    "reinstall": "^2.0.0",
+    "styled-components": "5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-export-default-from": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "8.2.4",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "10.2.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "6.7.1",
+    "dotenv": "^16.0.0",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "file-loader": "6.2.0",
+    "gh-pages": "^3.2.3",
+    "html-webpack-plugin": "5.5.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.7",
+    "node-sass": "6.0.1",
+    "prettier": "^2.6.0",
+    "prop-types": "^15.8.1",
+    "resolve-url-loader": "4.0.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "3.3.1",
+    "webpack": "5.70.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "4.7.4",
+    "webpack-merge": "5.8.0"
+  }
+}

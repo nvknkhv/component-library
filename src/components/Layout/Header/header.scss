@@ -1,0 +1,44 @@
+.header {
+  background-color: var(--grey-1);
+  padding: 24px 0;
+
+  &_white {
+    background-color: var(--white);
+  }
+
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__logo {
+    color: var(--black);
+  }
+
+  &__logo-icon {
+    width: 30px;
+    height: 30px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}

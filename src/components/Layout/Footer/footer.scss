@@ -1,0 +1,33 @@
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--grey-1);
+  font-family: 'Inter', sans-serif;
+
+  &_full {
+    padding: 4rem 1rem 7rem;
+    background-color: var(--white);
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey-3);
+  }
+
+  &_full &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--black);
+
+    @media (min-width: 768px) {
+      font-weight: 500;
+    }
+  }
+
+  &__details {
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+  }
+}

@@ -1,0 +1,25 @@
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  &__button {
+    position: relative;
+    padding: 12px 24px;
+    white-space: nowrap;
+    color: var(--grey-3);
+    text-transform: uppercase;
+
+    &_active {
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5px;
+        width: 100%;
+        background: var(--black);
+        content: '';
+      }
+    }
+  }
+}

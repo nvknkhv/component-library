@@ -25,6 +25,7 @@
     background-image: url('../../../assets/images/arrow-down.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.1s linear;
   }
 
   &__item[open] &__trigger-icon {

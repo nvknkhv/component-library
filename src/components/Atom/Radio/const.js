@@ -30,10 +30,10 @@ export const scss = `
   }
 
   &__icon {
-    position: absolute;
+    /*position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     color: var(--white);
     width: 18px;
     height: 18px;
@@ -45,11 +45,13 @@ export const scss = `
     border: 1px solid var(--grey-2);
     box-sizing: border-box;
     border-radius: 50%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
-    font-family: 'Inter';
+    font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -68,7 +70,7 @@ export const scss = `
   &_disabled {
     pointer-events: none;
   }
-  
+
   &__input:disabled ~ &__state &__icon {
     color: var(--grey-2);
   }
@@ -82,9 +84,15 @@ export const scss = `
   &__input:disabled ~ &__state &__title {
     color: var(--grey-2);
   }
-  
-  input[type=radio]{
+
+  input[type='radio'] {
     -webkit-appearance: none;
   }
+}
+
+.radio-group {
+  height: 100%;
+  display: grid;
+  gap: 48px;
 }
 `;

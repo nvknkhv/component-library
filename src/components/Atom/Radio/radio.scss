@@ -16,10 +16,6 @@
   }
 
   &__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: var(--white);
     width: 18px;
     height: 18px;
@@ -31,7 +27,9 @@
     border: 1px solid var(--grey-2);
     box-sizing: border-box;
     border-radius: 50%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
@@ -49,6 +47,7 @@
 
   &__input:checked ~ &__state &__icon {
     color: var(--primary);
+    animation: pulse-radio 0.5s;
   }
 
   &_disabled {
@@ -78,4 +77,24 @@
   height: 100%;
   display: grid;
   gap: 48px;
+}
+
+@keyframes pulse-radio {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    border-radius: 50%;
+  }
 }

@@ -18,6 +18,9 @@
     background-color: var(--grey-2);
     border-radius: 50%;
     display: inline-block;
+    background: linear-gradient(-45deg, var(--grey-1), var(--grey-2), var(--grey-3));
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
   }
 
   &__content {
@@ -28,8 +31,10 @@
   }
 
   &__rectangle {
-    background-color: var(--grey-2);
     height: 1.2rem;
+    background: linear-gradient(-45deg, var(--grey-1), var(--grey-2), var(--grey-3));
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
   }
 
   &__rectangle_width-half {
@@ -38,5 +43,17 @@
 
   &__rectangle_width-third {
     width: 33%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

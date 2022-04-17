@@ -10,16 +10,20 @@
     color: var(--grey-3);
     text-transform: uppercase;
 
-    &_active {
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 5px;
-        width: 100%;
-        background: var(--black);
-        content: '';
-      }
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 5px;
+      width: 100%;
+      background: var(--black);
+      content: '';
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+    }
+
+    &_active::after {
+      transform: scaleX(1);
     }
   }
 }

@@ -22,7 +22,7 @@
     bottom: calc(100% + 1rem);
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    opacity: 0;
     transition: opacity 0.2s linear, transform 0.1s linear;
   }
 
@@ -37,11 +37,11 @@
   }
 
   &:hover &__bubble {
-    display: block;
+    opacity: 1;
   }
 
   &_preview &__bubble {
-    display: block;
+    opacity: 1;
   }
 
   &_preview {

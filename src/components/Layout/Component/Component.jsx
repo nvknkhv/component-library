@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Prism } from 'react-syntax-highlighter';
+import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { TabsWrapper, Tab } from 'components/General/Tabs';
 import { Divider } from 'components/Layout/styles';
@@ -43,9 +43,15 @@ const Component = ({ content, name, tabs }) => {
           <Divider />
           <div className="component__code-content">
             <figure>
-              <SyntaxHighlighter language={activeTab} style={a11yLight}>
+              <Prism
+                language={activeTab}
+                style={prism}
+                customStyle={{ backgroundColor: 'white' }}
+                codeTagProps={{ backgroundColor: 'white' }}
+                showLineNumbers
+              >
                 {tabs[activeTab]}
-              </SyntaxHighlighter>
+              </Prism>
             </figure>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const html = `
     <p class="histogram__count">50254</p>
   </header>
   <div class="histogram__columns">
-    <div class="histogram__column" style="--value: 0.2"></divv
+    <div class="histogram__column" style="--value: 0.2"></div>
     <div class="histogram__column" style="--value: 0.4"></div>
     <div class="histogram__column" style="--value: 1"></div>
     <div class="histogram__column" style="--value: 0.8"></div>

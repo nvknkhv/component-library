@@ -1,5 +1,4 @@
-export const html = `
-<div class="skeleton">
+export const html = `<div class="skeleton">
   <div class="skeleton__header">
     <div class="skeleton__circle"></div>
     <div class="skeleton__content">
@@ -13,8 +12,7 @@ export const html = `
   </div>
 </div>`;
 
-export const scss = `
-.skeleton {
+export const scss = `.skeleton {
   width: 100%;
   border: 1px solid var(--grey-3);
   border-radius: 8px;
@@ -55,5 +53,4 @@ export const scss = `
   &__rectangle_width-third {
     width: 33%;
   }
-}
-`;
+}`;

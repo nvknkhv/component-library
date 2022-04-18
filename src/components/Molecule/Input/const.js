@@ -1,5 +1,4 @@
-export const html = `
-<div class="input-group input-group_success">
+export const html = `<div class="input-group input-group_success">
   <label class="input-group__title">Success</label>
   <div class="input-group__body">
     <input type="text" class="input-group__input" placeholder="Placeholder" />
@@ -9,8 +8,7 @@ export const html = `
   </div>
 </div>`;
 
-export const scss = `
-.input-group {
+export const scss = `.input-group {
   &__title {
     font-family: Inter;
     font-size: 1rem;
@@ -92,5 +90,4 @@ export const scss = `
     pointer-events: none;
     background-color: var(--grey-1);
   }
-}
-`;
+}`;

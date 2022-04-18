@@ -1,10 +1,8 @@
-export const html = `
-<div class="avatar avatar_preview">
+export const html = `<div class="avatar avatar_preview">
   <img class="avatar__icon" src="public/avatar-200.jpg" alt="avatar" />
 </div>`;
 
-export const scss = `
-.avatar {
+export const scss = `.avatar {
   width: 100%;
   height: 100%;
 

@@ -1,13 +1,11 @@
-export const html = `
-<div class="tooltip">
+export const html = `<div class="tooltip">
   <svg class="tooltip__icon">
     <use href="sprite.svg#help" />
   </svg>
   <div class="tooltip__bubble">Helper Text</div>
 </div>`;
 
-export const scss = `
-.tooltip {
+export const scss = `.tooltip {
   display: inline-block;
   position: relative;
 
@@ -49,5 +47,4 @@ export const scss = `
   &:hover &__bubble {
     display: block;
   }
-}
-`;
+}`;

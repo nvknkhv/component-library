@@ -1,9 +1,6 @@
-export const html = `
-<button class="button button_primary button_disabled">Primary disabled</button>
-`;
+export const html = `<button class="button button_primary button_disabled">Primary disabled</button>`;
 
-export const scss = `
-.button {
+export const scss = `.button {
   padding: 1rem 3rem;
   border-radius: 8px;
   border: none;
@@ -48,5 +45,4 @@ export const scss = `
       border: 1px solid var(--primary-dark);
     }
   }
-}
-`;
+}`;

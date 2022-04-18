@@ -1,5 +1,4 @@
-export const html = `
-<div class="histogram">
+export const html = `<div class="histogram">
   <header class="histogram__header">
     <div class="histogram__header-text">
       <p class="histogram__title">Total orders</p>
@@ -16,8 +15,7 @@ export const html = `
   </div>
 </div>`;
 
-export const scss = `
-.histogram {
+export const scss = `.histogram {
   width: 100%;
   padding: 1rem 1.5rem 1.5rem;
   border-radius: 8px;
@@ -65,5 +63,4 @@ export const scss = `
     flex-grow: 1;
     height: calc(var(--value) * 100%);
   }
-}
-`;
+}`;

@@ -1,5 +1,4 @@
-export const html = `
-<label class="checkbox">
+export const html = `<label class="checkbox">
   <input type="checkbox" class="checkbox__input"/>
   <span class="checkbox__state">
     <span class="checkbox__control">
@@ -11,8 +10,7 @@ export const html = `
   </span>
 </label>`;
 
-export const scss = `
-.checkbox {
+export const scss = `.checkbox {
   display: inline-flex;
 
   &__input {
@@ -84,5 +82,4 @@ export const scss = `
   input[type=checkbox]{
     -webkit-appearance: none;
   }
-}
-`;
+}`;

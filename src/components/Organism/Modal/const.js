@@ -1,5 +1,4 @@
-export const html = `
-<button id="modal-open" class="button button_primary">Open modal</button>
+export const html = `<button id="modal-open" class="button button_primary">Open modal</button>
 <div id="modal" class="modal">
     <div class="modal__popup">
       <div class="modal__content">
@@ -16,7 +15,7 @@ export const html = `
     </div>
 </div>`;
 
-export const scss = `
+export const scss = `.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -72,11 +71,9 @@ export const scss = `
     height: 1.5rem;
     width: 1.5rem;
   }
-}
-`;
+}`;
 
-export const js = `
-(function () {
+export const js = `(function () {
   const close = document.getElementById('modal-close');
   const modal = document.getElementById('modal');
   const modalOpen = document.getElementById('modal-open');

@@ -1,5 +1,4 @@
-export const html = `
-<div class="calendar calendar_preview">
+export const html = `<div class="calendar calendar_preview">
   <div class="calendar__title">April 2022</div>
   <div class="calendar__wrapper">
     <div class="calendar__inner">
@@ -44,8 +43,7 @@ export const html = `
   </div>
 </div>`;
 
-export const scss = `
-.calendar {
+export const scss = `.calendar {
   border-radius: 8px;
   border: 1px solid var(--grey-3);
   padding: 28px 36px;
@@ -131,5 +129,4 @@ export const scss = `
     font-size: 14px;
     margin-bottom: 12px;
   }
-}
-`;
+}`;

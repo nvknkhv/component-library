@@ -1,5 +1,4 @@
-export const html = `
-<label class="radio">
+export const html = `<label class="radio">
   <input type="radio" class="radio__input" name="fields" value="default"/>
   <span class="radio__state">
     <span class="radio__control">
@@ -11,8 +10,7 @@ export const html = `
   </span>
 </label>`;
 
-export const scss = `
-.radio {
+export const scss = `.radio {
   display: inline-flex;
 
   &__input {
@@ -88,11 +86,4 @@ export const scss = `
   input[type='radio'] {
     -webkit-appearance: none;
   }
-}
-
-.radio-group {
-  height: 100%;
-  display: grid;
-  gap: 48px;
-}
-`;
+}`;

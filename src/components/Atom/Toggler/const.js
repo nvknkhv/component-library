@@ -1,5 +1,4 @@
-export const html = `
-<label class="toggler">
+export const html = `<label class="toggler">
   <input type="checkbox" class="toggler__input"/>
   <span class="toggler__state">
     <span class="toggler__control">
@@ -11,8 +10,7 @@ export const html = `
   </span>
 </label>`;
 
-export const scss = `
-.toggler {
+export const scss = `.toggler {
   display: inline-flex;
 
   &__input {
@@ -88,5 +86,4 @@ export const scss = `
   input[type=checkbox]{
     -webkit-appearance: none;
   }
-}
-`;
+}`;

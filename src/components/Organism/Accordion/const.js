@@ -1,5 +1,4 @@
-export const html = `
-<div class="accordion">
+export const html = `<div class="accordion">
   <details class="accordion__item">
     <summary class="accordion__trigger">
       <span>Accordion item 1</span>
@@ -11,8 +10,7 @@ export const html = `
   </details>
 </div>`;
 
-export const scss = `
-.accordion {
+export const scss = `.accordion {
   font-size: 1rem;
   line-height: 1.5rem;
   width: 100%;
@@ -59,5 +57,4 @@ export const scss = `
   &__item:not(:last-child) {
     margin-bottom: 8px;
   }
-}
-`;
+}`;

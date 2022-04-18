@@ -3,6 +3,7 @@ require('dotenv/config'); /* allows node process work with variables from .env f
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const jsLoaders = require('./loaders/js-loaders');
 const cssLoaders = require('./loaders/css-loaders');
@@ -48,6 +49,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
+    new FaviconsWebpackPlugin('assets/images/favicon.png'),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/index.html'),
     }),

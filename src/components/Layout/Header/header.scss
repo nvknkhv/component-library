@@ -1,15 +1,16 @@
 .header {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg);
   padding: 24px 0;
 
-  &_white {
-    background-color: var(--white);
+  &_main {
+    background-color: var(--main-bg);
   }
 
   &__title {
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 400;
+    color: var(--text-primary);
 
     @media (min-width: 768px) {
       font-size: 3rem;
@@ -20,6 +21,7 @@
   &__navbar {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     margin-bottom: 2rem;
 
@@ -30,7 +32,12 @@
   }
 
   &__logo {
-    color: var(--black);
+    color: var(--text-primary);
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      font-weight: 500;
+    }
   }
 
   &__logo-icon {

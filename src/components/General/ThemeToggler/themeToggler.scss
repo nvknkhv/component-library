@@ -1,0 +1,23 @@
+.theme-toggler {
+  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+  color: var(--text-secondary);
+  display: flex;
+  position: absolute;
+  right: 0;
+
+  @media (min-width: 768px) {
+   position: static;
+    right: auto;
+  }
+
+  & .toggler__state {
+    gap: 0;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

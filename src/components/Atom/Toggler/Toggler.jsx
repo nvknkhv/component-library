@@ -7,6 +7,7 @@ export const Toggler = ({
   children,
   isChecked = false,
   isDisabled = false,
+  onClick,
 }) => {
   let className = 'toggler';
   if (isChecked) className += ' toggler_checked';
@@ -18,6 +19,7 @@ export const Toggler = ({
         className="toggler__input"
         defaultChecked={isChecked}
         disabled={isDisabled}
+        onClick={onClick}
       />
       <span className="toggler__state">
         <span className="toggler__control">
@@ -45,4 +47,5 @@ Toggler.propTypes = {
   children: PropTypes.node,
   isChecked: PropTypes.bool,
   isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };

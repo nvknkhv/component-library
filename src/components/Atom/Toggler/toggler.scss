@@ -30,7 +30,7 @@
     border: 1px solid var(--grey-2);
     box-sizing: border-box;
     border-radius: 16px;
-    background: var(--white);
+    background: var(--main-bg);
     position: relative;
     transition: all .5s ease;
   }
@@ -41,7 +41,7 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: var(--grey-4);
+    color: var(--inner-text-color-primary);
   }
 
   &__input:checked ~ &__state &__control {
@@ -60,16 +60,16 @@
 
   &__input:disabled ~ &__state &__control {
     pointer-events: none;
-    background: var(--grey-2);
-    border-color: var(--grey-2);
+    background: var(--inner-text-color-secondary);
+    border-color: var(--inner-text-color-secondary);
   }
 
   &__input:disabled ~ &__state &__title {
-    color: var(--grey-2);
+    color: var(--inner-text-color-secondary);
   }
 
   &__input:disabled ~ &__state &__icon {
-    color: var(--grey-3);
+    color: var(--inner-text-color-secondary);
   }
 
   input[type='checkbox'] {

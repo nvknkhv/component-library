@@ -6,8 +6,11 @@ import ComponentPage from 'pages/ComponentPage';
 import MainPage from 'pages/MainPage';
 import MoleculePage from 'pages/MoleculePage';
 import OrganismPage from 'pages/OrganismPage';
+import { useTheme } from 'theme';
 
 const App = () => {
+  const { componentMounted } = useTheme();
+  if (!componentMounted) return null;
   return (
     <Routes>
       <Route index element={<Navigate replace to={MainPage.path} />} />

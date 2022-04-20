@@ -27,7 +27,7 @@ const BurgerMenu = () => {
       </div>
       <div id="burger-menu" className="burger-menu" data-open={isOpen}>
         <div className="burger-menu__menu" ref={refBurgerMenu}>
-          <header className="header header_white">
+          <header className="header header_main">
             <Container>
               <div className="header__navbar burger-menu__navbar">
                 <div

@@ -1,3 +1,5 @@
+$color: #acb5bd;
+
 .checkbox {
   display: inline-flex;
 
@@ -20,7 +22,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--white);
+    color: var(--main-bg);
     width: 15px;
     height: 13px;
   }
@@ -29,7 +31,7 @@
   &__control {
     width: 28px;
     height: 28px;
-    background: var(--white);
+    background: var(--main-bg);
     border: 1px solid var(--grey-2);
     box-sizing: border-box;
     border-radius: 4px;
@@ -42,7 +44,7 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: var(--grey-4);
+    color: var(--inner-text-color-primary);
   }
 
   &__input:checked ~ &__state &__control {
@@ -51,21 +53,25 @@
     animation: pulse-checkbox 0.5s;
   }
 
+  &__input:checked ~ &__state &__icon {
+    color: var(--white);
+  }
+
   &_disabled {
     pointer-events: none;
   }
 
   &__input:disabled ~ &__state &__control {
-    background: var(--grey-2);
-    border-color: var(--grey-2);
+    background: var(--inner-text-color-secondary);
+    border-color: var(--inner-text-color-secondary);
   }
 
   &__input:disabled ~ &__state &__title {
-    color: var(--grey-2);
+    color: var(--inner-text-color-secondary);
   }
 
   &__input:disabled ~ &__state &__icon {
-    color: var(--grey-2);
+    color: var(--inner-text-color-secondary);
   }
 
   input[type='checkbox'] {
@@ -82,16 +88,16 @@
 @keyframes pulse-checkbox {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    box-shadow: #{0 0 0 0 rgba($color, 0.7)};
   }
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 10px rgba($color, 0);
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba($color, 0);
   }
 }

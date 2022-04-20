@@ -1,24 +1,24 @@
 .footer {
   padding: 2rem 1rem;
   text-align: center;
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg);
   font-family: 'Inter', sans-serif;
 
   &_full {
     padding: 4rem 1rem 7rem;
-    background-color: var(--white);
+    background-color: var(--main-bg);
   }
 
   &__title {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--grey-3);
+    color: var(--text-secondary);
   }
 
   &_full &__title {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: var(--black);
+    color: var(--text-primary);
 
     @media (min-width: 768px) {
       font-weight: 500;
@@ -29,5 +29,6 @@
     max-width: 640px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
   }
 }

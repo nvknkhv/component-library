@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: rgba(196, 196, 196, 0.5);
+  background-color: rgba(#acb5bd, 0.5);
 
   &__menu {
     width: 280px;
@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background-color: var(--white);
+    background-color: var(--main-bg);
     opacity: 1;
     @media (min-width: 768px) {
       width: 420px;
@@ -38,6 +38,7 @@
   &__icon {
     width: 24px;
     height: 24px;
+    color: var(--text-primary);
   }
 
   &__navbar {

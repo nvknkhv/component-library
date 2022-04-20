@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Prism } from 'react-syntax-highlighter';
-import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {
+  materialDark,
+  materialLight,
+} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { TabsWrapper, Tab } from 'components/General/Tabs';
 import { Divider } from 'components/Layout/styles';
+import { useTheme } from 'theme';
 import ComponentMenu from './ComponentMenu';
 import './component.scss';
 
@@ -16,6 +20,8 @@ const WrapperPadded = styled.div`
 const Component = ({ content, name, tabs }) => {
   const TABS_NAMES = Object.keys(tabs);
   const [activeTab, setActiveTab] = useState(TABS_NAMES[0]);
+  const { theme } = useTheme();
+
   useEffect(() => setActiveTab(TABS_NAMES[0]), [name]);
 
   return (
@@ -45,9 +51,7 @@ const Component = ({ content, name, tabs }) => {
             <figure>
               <Prism
                 language={activeTab}
-                style={prism}
-                customStyle={{ backgroundColor: 'white' }}
-                codeTagProps={{ backgroundColor: 'white' }}
+                style={theme === 'dark' ? materialDark : materialLight}
                 showLineNumbers
               >
                 {tabs[activeTab]}

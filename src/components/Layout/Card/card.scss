@@ -6,7 +6,7 @@
   box-sizing: border-box;
   border-radius: 12px;
   box-shadow: 0 2px 4px 0 #2124290d;
-  background-color: var(--white);
+  background-color: var(--main-bg);
   gap: 1.5rem;
 
   @media (min-width: 768px) {
@@ -28,6 +28,7 @@
   &__title {
     font-size: 1.5rem;
     font-weight: 400;
+    color: var(--text-primary);
   }
 }
 

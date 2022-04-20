@@ -8,11 +8,26 @@
     object-fit: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: var(--grey-2);
+    background: linear-gradient(-45deg, var(--grey-1), var(--grey-2), var(--grey-3));
+    background-size: 200% 200%;
+    animation: loading 2.5s ease infinite;
   }
 
   &_preview {
     width: 200px;
     height: 200px;
+  }
+}
+
+
+@keyframes loading {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

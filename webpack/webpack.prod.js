@@ -37,6 +37,5 @@ module.exports = merge(common, {
   performance: {
     hints: false,
     maxAssetSize: 512000, //512kb,
-    // TODO: add code splitting
   },
 });

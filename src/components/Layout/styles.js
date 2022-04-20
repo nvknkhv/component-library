@@ -16,7 +16,6 @@ export const Page = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--grey-bg);
 `;
 
 export const PageContent = styled.main`

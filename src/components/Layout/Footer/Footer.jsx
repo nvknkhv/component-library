@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import 'components/Layout/Footer/footer.scss';
+import './footer.scss';
 
 const Footer = ({ isFull = false }) => {
   if (isFull) {

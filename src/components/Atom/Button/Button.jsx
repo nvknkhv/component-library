@@ -8,11 +8,16 @@ export const Button = ({
   isDisabled = false,
   isPreview = false,
   type,
+  onClick,
 }) => {
   let className = `button button_${type}`;
   if (isPreview) className += ' button_preview';
   if (isDisabled) className += ' button_disabled';
-  return <button className={className}>{children}</button>;
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export const Buttons = ({ isPreview = false }) => {
@@ -45,6 +50,7 @@ Button.propTypes = {
   isDisabled: PropTypes.bool,
   isPreview: PropTypes.bool,
   type: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 };
 
 Buttons.propTypes = {

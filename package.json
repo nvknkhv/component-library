@@ -10,7 +10,7 @@
     "start:prod": "cross-env NODE_ENV=production webpack-dev-server --config ./webpack/webpack.prod.js --progress",
     "build:dev": "cross-env NODE_ENV=development webpack --config ./webpack/webpack.dev.js --progress",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.prod.js --progress",
-    "format": "prettier --write src/**/*.{html,css,scss}",
+    "format": "prettier --write src/**/*",
     "eslint:fix": "eslint --fix src/**/*.{js,jsx}",
     "reinstall": "rm -rf node_modules && npm i",
     "predeploy": "npm run build",
@@ -22,8 +22,11 @@
     }
   },
   "lint-staged": {
-    "*.{html,css,scss}": [
+    "*": [
       "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --cache --fix --resolve-plugins-relative-to ."
     ]
   },
   "keywords": [

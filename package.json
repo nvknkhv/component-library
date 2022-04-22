@@ -14,7 +14,21 @@
     "eslint:fix": "eslint --fix src/**/*.{js,jsx}",
     "reinstall": "rm -rf node_modules && npm i",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "changelog": "standard-changelog",
+    "cm": "npx git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./cz-changelog",
+      "maxHeaderWidth": 100,
+      "maxLineWidth": 100,
+      "defaultType": "",
+      "defaultScope": "",
+      "defaultSubject": "",
+      "defaultBody": "",
+      "defaultIssues": ""
+    }
   },
   "husky": {
     "hooks": {
@@ -45,16 +59,11 @@
     ]
   },
   "dependencies": {
-    "autoprefixer": "^10.4.4",
-    "components": "^0.1.0",
-    "postcss-loader": "^6.2.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0",
     "react-syntax-highlighter": "^15.5.0",
-    "reinstall": "^2.0.0",
     "styled-components": "5.1.1"
   },
   "devDependencies": {
@@ -63,15 +72,21 @@
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "autoprefixer": "^10.4.4",
     "babel-loader": "8.2.4",
     "clean-webpack-plugin": "4.0.0",
+    "commitizen": "^4.2.4",
     "copy-webpack-plugin": "10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "6.7.1",
+    "cz-conventional-changelog": "^3.3.0",
     "dotenv": "^16.0.0",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
     "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "6.2.0",
@@ -81,10 +96,12 @@
     "lint-staged": "12.3.7",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "6.0.1",
+    "postcss-loader": "^6.2.1",
     "prettier": "^2.6.0",
     "prop-types": "^15.8.1",
     "resolve-url-loader": "4.0.0",
     "sass-loader": "^12.6.0",
+    "standard-changelog": "^2.0.27",
     "style-loader": "3.3.1",
     "terser-webpack-plugin": "^5.3.1",
     "webpack": "5.70.0",
